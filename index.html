@@ -262,6 +262,37 @@ h2.big span{font-weight:600}
 .final::before{background:linear-gradient(180deg,rgba(6,6,7,.75),rgba(6,6,7,.9))}
 .final h2{font-weight:300}
 section + section{position:relative}
+
+/* ---- editorial services + refinements ---- */
+.pb .stars{color:#F2A900!important}
+.svc-grid{counter-reset:sv;gap:0;border-top:1px solid #E6E1D3;grid-template-columns:1fr!important}
+.svc{counter-increment:sv;display:grid;grid-template-columns:1fr;gap:6px;border:0;border-bottom:1px solid #E6E1D3;border-radius:0;padding:26px 0;background:transparent;transition:background-color .25s var(--ease),padding .25s var(--ease)}
+.svc::before{content:"0" counter(sv);font-family:var(--h);font-weight:300;font-size:.95rem;color:#B8860B;letter-spacing:.1em}
+.svc:hover{transform:none;box-shadow:none;background:#FBF8F0;border-color:#E6E1D3}
+.svc .tag,.svc ul{display:none}
+.svc h3{font-weight:500;font-size:1.35rem;margin:0}
+.svc p{margin:0;color:var(--muted)}
+.svc .go{margin-top:6px}
+.svc.feat{background:transparent;color:inherit}
+.svc.feat::before{content:"0" counter(sv);background:none;position:static;z-index:auto;inset:auto}
+.svc.feat{border-color:#E6E1D3;background-image:none}
+.svc.feat h3{color:var(--text)}
+.svc.feat .go{color:#8F6200}
+@media(min-width:900px){
+ #services .wrap{display:grid;grid-template-columns:.75fr 1.25fr;column-gap:72px;align-items:start}
+ #services h2.big{font-size:clamp(2rem,3vw,2.6rem)}
+ #services .lbl,#services h2,#services .sub{grid-column:1}
+ #services h2{position:relative}
+ #services .svc-grid{grid-column:2;grid-row:1 / span 4;margin-top:0}
+ .svc{grid-template-columns:56px 1fr 230px;align-items:center;column-gap:24px;padding:30px 12px}
+ .svc::before{grid-row:1 / span 2}
+ .svc h3{grid-column:2}
+ .svc p{grid-column:2}
+ .svc .go{grid-column:3;grid-row:1 / span 2;justify-self:end;margin:0}
+}
+.hero{background-image:none}
+.hero .grain{position:absolute;inset:0;z-index:-1;opacity:.12;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+.hero p.lead{max-width:50ch}
 </style>
 </head>
 <body>
@@ -292,11 +323,12 @@ section + section{position:relative}
 <main>
 <section class="hero" id="top">
  <picture class="bg"><source media="(max-width:759px)" srcset="assets/hero-dubai-m.jpg"><img src="assets/hero-dubai.jpg" alt="" fetchpriority="high" width="2000" height="1333"></picture>
+ <div class="grain" aria-hidden="true"></div>
  <div class="wrap hero-grid">
   <div>
    <span class="pill"><i class="flag" aria-hidden="true"></i><span id="h-pill">UAE crypto licensing · VARA · ADGM · DIFC · CMA · CBUAE</span></span>
    <h1 id="h-title">Get your <span>crypto licence</span> in the UAE</h1>
-   <p class="lead" id="h-lead">Exchanges, brokers, custodians, token issuers and payment firms: our Dubai crypto lawyers pick the right regulator, draft your full application and deal with the regulator until you're licensed. Tell us what you're building and we'll reply with your route, costs and timeline.</p>
+   <p class="lead" id="h-lead">Our Dubai crypto lawyers choose the right regulator, draft your full application and handle the regulator until you're licensed. Tell us what you're building; we reply with your route, costs and timeline.</p>
    <div class="cta-row">
     <a class="btn btn-wa" href="#" data-wa data-svc="hero" data-loc="hero" id="h-cta"><svg><use href="#wa"/></svg><span id="h-cta-t">Chat with a crypto lawyer</span></a>
     <a class="btn btn-line" href="tel:+971522352234" data-track="phone" data-loc="hero"><svg><use href="#ph"/></svg>Call +971 52 235 2234</a>
@@ -332,7 +364,7 @@ section + section{position:relative}
 <section id="services">
  <div class="wrap">
   <div class="lbl">What we can help with</div>
-  <h2 class="big">Pick what you need. <span style="color:var(--gold-text)">We'll reply on WhatsApp.</span></h2>
+  <h2 class="big">Pick what you need. <span style="color:var(--gold-text)">We reply on WhatsApp.</span></h2>
   <p class="sub">One tap opens WhatsApp with your question already written. No forms, no waiting for a callback.</p>
   <div class="svc-grid">
    <article class="svc feat rv"><span class="tag">Most requested</span><h3>VARA licence, Dubai</h3><p>For exchanges, broker-dealers, custodians, lending, transfer and token issuance in Dubai.</p><ul><li>Activity and capital plan</li><li>Business plan, AML/CFT manual, policies</li><li>Filing and VARA's questions handled</li></ul><a class="go" href="#" data-wa data-svc="vara" data-loc="svc"><svg><use href="#wa"/></svg>Ask about a VARA licence</a></article>
