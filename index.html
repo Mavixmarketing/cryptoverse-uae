@@ -224,6 +224,44 @@ footer a{color:#D0D0D8}
 .rv{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+/* ---- premium layer ---- */
+:root{--gold-grad:linear-gradient(135deg,#F7D774 0%,#F2A900 45%,#B8860B 100%);--gold-line:linear-gradient(90deg,transparent,#C9A24A,transparent)}
+body{background:#0B0B0C}
+main{background:#fff}
+.hero h1{font-weight:300;letter-spacing:-.035em;line-height:1.02}
+.hero h1 span{font-weight:600;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2.big{font-weight:300;letter-spacing:-.03em}
+h2.big span{font-weight:600}
+.lbl{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem}
+.btn-wa,.btn-gold{background:var(--gold-grad);color:#111;box-shadow:0 14px 34px -14px rgba(242,169,0,.65);border:0}
+.btn-wa:hover,.btn-gold:hover{filter:brightness(1.06);background:var(--gold-grad)}
+.btn-wa svg{color:#0B5A2B}
+.btn{border-radius:2px;letter-spacing:.02em}
+.btn-line{border-color:rgba(201,162,74,.55)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold-line)}
+.glance{border-radius:4px;border-color:rgba(201,162,74,.35);background:rgba(10,10,11,.6)}
+.glance dd{font-weight:500;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pill{border-radius:2px;border-color:rgba(201,162,74,.35);text-transform:uppercase;letter-spacing:.14em;font-size:.7rem}
+.proofbar{background:#0B0B0C}
+.pb b{font-weight:300;font-size:2.2rem}
+.svc{border-radius:4px;border-color:#ECE8DD}
+.svc.feat{background:#0B0B0C url(assets/dusk.jpg) center/cover;position:relative;isolation:isolate}
+.svc.feat::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,12,.55),rgba(11,11,12,.95))}
+.svc .go{color:#8F6200}
+.svc.feat .go{color:#F7D774}
+.svc:hover{border-color:#C9A24A}
+.photo,.freeze,.cmp-wrap,.rev,.person{border-radius:4px}
+.photo{aspect-ratio:4/3.6}
+.cmp thead th.hl{background:var(--gold-grad)}
+.step{border-radius:4px;background:transparent;border-color:rgba(201,162,74,.25)}
+.step::before{background:transparent;border:1px solid #C9A24A;color:#F7D774;font-weight:400}
+.fab{background:var(--gold-grad)}
+.fab svg{color:#0B5A2B}
+.sticky .btn-wa{border-radius:2px}
+.final::before{background:linear-gradient(180deg,rgba(6,6,7,.75),rgba(6,6,7,.9))}
+.final h2{font-weight:300}
+section + section{position:relative}
 </style>
 </head>
 <body>
@@ -310,7 +348,7 @@ footer a{color:#D0D0D8}
 <section style="padding-top:0">
  <div class="wrap split">
   <div class="photo rv" id="why-photo">
-   <img src="assets/band-dubai.jpg" alt="Dubai skyline at night" loading="lazy">
+   <img src="assets/office.jpg" alt="Office overlooking the city" loading="lazy">
    <div class="cap"><svg width="22" height="22" style="color:var(--gold);flex:none"><use href="#pin"/></svg><span><b>Level 38, Media One Tower</b>Dubai Media City, UAE</span></div>
   </div>
   <div class="rv">
@@ -432,7 +470,7 @@ footer a{color:#D0D0D8}
 
 <footer><div class="wrap">
  <p>© 2026 Cryptoverse Legal Consultancy · <a href="https://www.cryptoverselawyers.io/">cryptoverselawyers.io</a> · <a href="https://www.cryptoverselawyers.io/privacy-policy/">Privacy policy</a></p>
- <p>This page gives general information, not legal advice. Regulator names are used for information only and do not imply endorsement. Cryptoverse Legal does not offer investment, trading or fund-recovery services. Dubai skyline photography: Unsplash.</p>
+ <p>This page gives general information, not legal advice. Regulator names are used for information only and do not imply endorsement. Cryptoverse Legal does not offer investment, trading or fund-recovery services. Photography: Unsplash.</p>
 </div></footer>
 
 <a class="fab" href="#" data-wa data-svc="general" data-loc="fab" aria-label="Chat on WhatsApp"><svg><use href="#wa"/></svg></a>
