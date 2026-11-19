@@ -468,6 +468,16 @@ footer{background:#000}
  .rt-go{height:46px}
 }
 @media (prefers-reduced-motion:reduce){#h-cta{animation:none}}
+
+/* clean hero 19 Nov */
+.hero{padding:150px 0 90px}
+.hero-grid{align-items:center}
+.hero h1{margin-top:0}
+.btn-xl{min-height:62px;padding:0 34px;font-size:1.08rem;border-radius:14px}
+.trust{margin:18px 0 0;font-size:.9rem;color:#B9B9C3}
+.trust .stars{color:var(--gold);letter-spacing:2px;margin-right:4px}
+.trust .dot{opacity:.4;margin:0 6px}
+@media(max-width:600px){.trust .dot{margin:0 3px}.trust .dot:last-of-type{display:none}.btn-xl{width:100%}}
 </style>
 </head>
 <body>
@@ -495,23 +505,13 @@ footer{background:#000}
  <canvas class="net" id="net" aria-hidden="true"></canvas><div class="hero-glow" aria-hidden="true"></div>
  <div class="wrap hero-grid">
   <div>
-   <span class="pill"><i class="flag" aria-hidden="true"></i><span id="h-pill">UAE crypto licensing · VARA · ADGM · DIFC · CMA · CBUAE</span></span>
+   <span class="pill" style="display:none"><span id="h-pill"></span></span>
    <h1 id="h-title">Get your <span>crypto licence</span> in the UAE</h1>
    <p class="lead" id="h-lead">Exchanges, brokers, custodians and token issuers: we pick the right regulator, write your application and handle the regulator until you're licensed.</p>
-   <div class="rating"><span class="stars" aria-label="5 out of 5">★★★★★</span><b>5.0 on Google</b><span class="dot">·</span><span>10+ licences secured</span><span class="dot r3">·</span><span class="r3">Clients licensed by VARA, ADGM, DIFC and CBUAE</span></div>
    <div class="cta-row">
-    <a class="btn btn-wa" href="#" data-wa data-svc="hero" data-loc="hero" id="h-cta"><svg><use href="#wa"/></svg><span id="h-cta-t">Chat with a crypto lawyer</span></a>
+    <a class="btn btn-wa btn-xl" href="#" data-wa data-svc="hero" data-loc="hero" id="h-cta"><svg><use href="#wa"/></svg><span id="h-cta-t">Chat with a crypto lawyer</span></a>
    </div>
-   <p class="or-call">Prefer to talk? Call <a href="tel:+971522352234" data-track="phone" data-loc="hero">+971 52 235 2234</a></p>
-   <div class="steps3" aria-label="How it starts">
-    <div><b>1</b><span>Tap WhatsApp</span></div>
-    <div><b>2</b><span>Say what you're building</span></div>
-    <div><b>3</b><span>Get route, costs, timeline</span></div>
-   </div>
-   <div class="micro">
-    <span><svg><use href="#ck"/></svg>Free first consultation</span>
-    <span><svg><use href="#ck"/></svg>Replies on WhatsApp ASAP</span>
-   </div>
+   <p class="trust"><span class="stars" aria-label="5 out of 5">★★★★★</span> 5.0 on Google <span class="dot">·</span> 10+ licences secured <span class="dot">·</span> Free first call</p>
   </div>
   <div class="hero-side">
   <aside class="glance" aria-label="VARA licence at a glance">
@@ -525,7 +525,6 @@ footer{background:#000}
    <div class="src">Fees per activity, from VARA's published fee schedule. Your exact numbers depend on your activities.</div>
    <a class="btn btn-gold" style="width:100%;margin-top:14px" href="#" data-wa data-svc="vara_costs" data-loc="glance"><svg><use href="#wa"/></svg>Get my exact costs</a>
   </aside>
-  <figure class="hq"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>&ldquo;They made four regulated activities make sense in one application.&rdquo;</blockquote><figcaption>Anonymous client · VARA approval across four activities</figcaption></figure>
   </div>
  </div>
 </section>
@@ -760,13 +759,13 @@ footer{background:#000}
   final:"Hi Cryptoverse, I'd like to know my licence route and costs."
  };
  var HERO={
-  vara:{pill:"VARA licensing · Dubai, UAE",title:"Get your <span>VARA licence</span> in Dubai",lead:"VARA fees start at AED 40,000 per activity. Our Dubai crypto lawyers plan your activities and capital, draft your full application and handle VARA's questions until you're licensed. Tell us what you're building and we'll reply with your costs and timeline.",svc:"vara"},
-  setup:{pill:"Crypto company setup · Dubai, UAE",title:"Set up your <span>crypto company</span> in Dubai",lead:"The right free zone, the right entity and the right licence, set up in the right order. Our crypto lawyers handle company formation, VARA or ADGM licensing and your bank account applications.",svc:"setup"},
+  vara:{pill:"VARA licensing · Dubai, UAE",title:"Get your <span>VARA licence</span> in Dubai",lead:"VARA fees start at AED 40,000 per activity. We plan your activities, write your application and handle VARA until you're licensed.",svc:"vara"},
+  setup:{pill:"Crypto company setup · Dubai, UAE",title:"Set up your <span>crypto company</span> in Dubai",lead:"The right free zone, entity and licence, set up in the right order, with licensing and bank applications handled for you.",svc:"setup"},
   adgm:{pill:"ADGM · DIFC · VARA · CMA · CBUAE",title:"Which <span>UAE crypto licence</span> fits your business?",lead:"Five regulators, very different costs and rules. Our Dubai crypto lawyers compare them for your model and handle the whole application.",svc:"compare"},
   lawyer:{pill:"Crypto lawyers · Dubai, UAE",title:"<span>Crypto lawyers</span> in Dubai",lead:"Licensing, compliance and regulatory filings for crypto businesses, from our office in Dubai Media City. Tell us what you're building on WhatsApp.",svc:"general"},
-  token:{pill:"Token launch and RWA · UAE",title:"Token launch and <span>RWA tokenisation</span> in the UAE",lead:"Structuring and licensing for token issuance and real-world-asset tokenisation in the UAE. Tell us what you're building and we'll reply with your route, costs and timeline.",svc:"token"},
-  cbuae:{pill:"Stablecoins and payment tokens · UAE",title:"Licensing for <span>stablecoins and payment tokens</span>",lead:"CBUAE licensing for payment token services and stablecoin businesses under the new Central Bank law. Tell us what you're building and we'll reply with your route, costs and timeline.",svc:"cbuae"},
-  cost:{pill:"UAE crypto licence costs · 2026",title:"See your <span>licence costs</span> before you commit",lead:"VARA fees start at AED 40,000 per activity, with capital from AED 100,000. Tell us what you're building and we'll reply with your route, costs and timeline.",svc:"vara_costs"}
+  token:{pill:"Token launch and RWA · UAE",title:"Token launch and <span>RWA tokenisation</span> in the UAE",lead:"Structuring and licensing for token issuance and real-world-asset tokenisation in the UAE.",svc:"token"},
+  cbuae:{pill:"Stablecoins and payment tokens · UAE",title:"Licensing for <span>stablecoins and payment tokens</span>",lead:"CBUAE licensing for payment token services and stablecoin businesses under the new Central Bank law.",svc:"cbuae"},
+  cost:{pill:"UAE crypto licence costs · 2026",title:"See your <span>licence costs</span> before you commit",lead:"VARA fees start at AED 40,000 per activity, with capital from AED 100,000. Message us for your route, costs and timeline.",svc:"vara_costs"}
  };
  var qs=new URLSearchParams(location.search);
  var variant=(qs.get("s")||"").toLowerCase();
