@@ -227,15 +227,15 @@ footer a{color:#D0D0D8}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 
-.tst{margin-top:32px;column-gap:18px}
-@media(min-width:760px){.tst{columns:2}}
-@media(min-width:1100px){.tst{columns:3}}
-.tq{break-inside:avoid;margin:0 0 18px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px 20px;position:relative;display:flex;flex-direction:column}
+.tst{margin-top:32px;display:grid;gap:18px;align-items:stretch}
+@media(min-width:760px){.tst{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.tst{grid-template-columns:repeat(3,1fr)}}
+.tq{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px 20px;position:relative;display:flex;flex-direction:column}
 .tq-mark{position:absolute;top:10px;right:18px;font-family:Georgia,serif;font-size:3.4rem;line-height:1;color:var(--gold);opacity:.3}
-.tq blockquote{margin:0}
+.tq blockquote{margin:0 0 16px}
 .tq blockquote p{margin:0;color:var(--body);font-size:.95rem;line-height:1.62}
 .tq .tq-h{font-family:var(--h);font-weight:600;color:var(--text);font-size:1.04rem;line-height:1.42;margin:0 0 10px;padding-right:28px}
-.tq figcaption{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:7px;font-size:.84rem}
+.tq figcaption{margin-top:auto;padding-top:14px;margin-bottom:0;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:7px;font-size:.84rem}
 .tq-who{color:var(--muted)}
 .tq-tag{background:var(--gold-soft);color:var(--gold-text);font-weight:600;border-radius:999px;padding:4px 11px;font-size:.78rem;line-height:1.35}
 .tst-hint{display:none}
@@ -413,6 +413,8 @@ footer a{color:#D0D0D8}
    <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They could speak to our lawyers and our engineers.&rdquo;</p><p>&ldquo;For a custody business, the details matter. Who can sign a transaction? How are assets segregated? What happens if something goes wrong? CRYPTOVERSE helped us turn those technical answers into a clear regulatory submission and supported us through to securing FSRA authorisation in ADGM.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag">FSRA Custody Services, ADGM</span></figcaption></figure>
    <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They understood how money actually moves through our product.&rdquo;</p><p>&ldquo;Our platform combined stored balances and retail payments. CRYPTOVERSE helped us map the flow of customer funds, explain our safeguarding and settlement arrangements, and present both parts of the business clearly. We secured our Stored Value Facilities and Retail Payment Services and Card Schemes licences from the Central Bank of the UAE.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag">CBUAE SVF and RPSCS</span></figcaption></figure>
    <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;We came away with a licence and a clearer advisory model.&rdquo;</p><p>&ldquo;CRYPTOVERSE helped us define what our advisers would do for clients, how we would be paid, and where our advisory role ended. That clarity shaped the application and gave our team a model we could put into practice once we secured our DFSA authorisation in the DIFC.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag">DFSA Advisory Services, DIFC</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They understood what it takes to build a custody business.&rdquo;</p><p>&ldquo;CRYPTOVERSE helped us explain the controls that mattered most to our business, from who could authorise a withdrawal to how we would protect client assets if something went wrong. They guided us through the application process, and we secured our standalone VARA Custody Services licence.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag">VARA Custody Services</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They helped us make three moving parts work together.&rdquo;</p><p>&ldquo;We were applying for both Exchange and Broker-Dealer Services while working with an external custodian. CRYPTOVERSE helped us show how orders would be executed, how assets would settle, and where responsibility passed to the custodian. We secured VARA authorisation for both activities with our outsourced custody model.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag">VARA Exchange and Broker-Dealer Services with outsourced custody</span></figcaption></figure>
   </div>
   <p class="tst-hint">Swipe for more &rarr;</p>
  </div>
