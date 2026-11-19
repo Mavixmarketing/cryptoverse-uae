@@ -257,6 +257,14 @@ footer a{color:#D0D0D8}
 .wa-alt{margin-top:12px;font-size:.88rem;color:var(--muted)}
 .wa-alt a{color:var(--text);font-weight:600}
 @media(max-width:560px){.wa-grid{grid-template-columns:1fr}.wa-qr{margin:0 auto}}
+
+.qs{padding:56px 0 8px}
+.qgrid{display:grid;gap:12px;margin-top:26px}
+@media(min-width:760px){.qgrid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.qgrid{grid-template-columns:repeat(3,1fr)}}
+.qa{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;border:1px solid var(--line);border-radius:var(--r);background:#fff;color:var(--text);text-decoration:none;font-family:var(--h);font-weight:600;font-size:1rem;line-height:1.35;transition:border-color .2s,box-shadow .2s,transform .2s}
+.qa svg{width:22px;height:22px;flex:none;color:var(--wa)}
+.qa:hover{border-color:var(--wa);box-shadow:0 8px 24px rgba(37,211,102,.14);transform:translateY(-1px)}
 </style>
 </head>
 <body>
@@ -322,6 +330,22 @@ footer a{color:#D0D0D8}
  <div class="pb"><b>25<em>+</em></b><span>banking and industry partnerships</span></div>
  <div class="pb" id="pb-google"><b><span class="stars" style="font-size:1.1rem">★★★★★</span></b><span>5.0 on Google</span></div>
 </div></div>
+
+<section class="qs" id="questions" aria-label="Common questions">
+ <div class="wrap">
+  <div class="lbl">Ask us directly</div>
+  <h2 class="big">What's the question on your mind?</h2>
+  <p class="sub">Tap your question. WhatsApp opens with it already written, and a crypto lawyer replies.</p>
+  <div class="qgrid">
+   <a class="qa" href="#" data-wa data-svc="q_licence" data-loc="questions"><span>Which licence does my business actually need?</span><svg><use href="#wa"/></svg></a>
+   <a class="qa" href="#" data-wa data-svc="q_cost" data-loc="questions"><span>What will the licence cost me in total?</span><svg><use href="#wa"/></svg></a>
+   <a class="qa" href="#" data-wa data-svc="q_time" data-loc="questions"><span>How long until we can launch?</span><svg><use href="#wa"/></svg></a>
+   <a class="qa" href="#" data-wa data-svc="q_abroad" data-loc="questions"><span>Can I set this up from outside the UAE?</span><svg><use href="#wa"/></svg></a>
+   <a class="qa" href="#" data-wa data-svc="q_bank" data-loc="questions"><span>Will a bank open an account for us?</span><svg><use href="#wa"/></svg></a>
+   <a class="qa" href="#" data-wa data-svc="q_token" data-loc="questions"><span>Can I launch a token or tokenise assets here?</span><svg><use href="#wa"/></svg></a>
+  </div>
+ </div>
+</section>
 
 <section id="services">
  <div class="wrap">
@@ -477,6 +501,12 @@ footer a{color:#D0D0D8}
  var dl=window.dataLayer=window.dataLayer||[];
  function push(o){try{dl.push(o)}catch(e){}}
  var MSG={
+  q_licence:"Hi Cryptoverse, which licence does my crypto business actually need?",
+  q_cost:"Hi Cryptoverse, what would the licence cost us in total?",
+  q_time:"Hi Cryptoverse, how long would it take until we can launch?",
+  q_abroad:"Hi Cryptoverse, can we set up the company and licence from outside the UAE?",
+  q_bank:"Hi Cryptoverse, can you help us get a bank account for our crypto business?",
+  q_token:"Hi Cryptoverse, can we launch a token or tokenise assets in the UAE?",
   general:"Hi Cryptoverse, I'd like advice on a crypto licence in the UAE.",
   hero:"Hi Cryptoverse, I'd like advice on a crypto licence in the UAE.",
   vara_costs:"Hi Cryptoverse, can you send me the full costs of a VARA licence for my business?",
