@@ -559,6 +559,71 @@ footer{background:#000}
 @media(max-width:999px){.hero-side{margin-top:58px}.w1{top:-30px;left:14px}}
 @media(max-width:899px){.steps::before{content:"";position:absolute;left:27px;top:20px;bottom:20px;width:2px;background:linear-gradient(#F2A900,rgba(242,169,0,.15))}}
 @media(max-width:999px){.hero-side{margin-top:52px}.w1{top:-40px}}
+
+/* ===== v5 polish 19 Nov (taste-skill checks) ===== */
+:root{--muted:#575763}
+.rv,.rv.in{opacity:1!important;transform:none!important}
+.big,h1,h2{text-wrap:balance}
+p,li{text-wrap:pretty}
+section{padding:104px 0}
+@media(max-width:700px){section{padding:72px 0}}
+.qs{padding:88px 0 40px}
+.qs .lbl,.qs .big{text-align:center;justify-content:center}
+.qs .sub{text-align:center;margin-left:auto;margin-right:auto}
+/* hero fills the first screen, stats card inside it */
+.hero{min-height:100svh;display:grid;align-content:center;padding:132px 0 56px}
+.statwrap{margin-top:64px}
+@media(max-width:999px){.hero{min-height:0;padding:120px 0 48px}.statwrap{margin-top:56px}}
+@media(max-width:700px){.skyline{display:none}}
+.hero-grid>div:first-child>*,.hero-grid>.hero-side{animation:enter .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-grid>div:first-child>*:nth-child(2){animation-delay:.08s}.hero-grid>div:first-child>*:nth-child(3){animation-delay:.16s}.hero-grid>div:first-child>*:nth-child(4){animation-delay:.24s}.hero-grid>div:first-child>*:nth-child(5){animation-delay:.32s}
+.hero-grid>.hero-side{animation-delay:.3s}
+.w2{bottom:-46px}
+@keyframes enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-grid>div:first-child>*,.hero-grid>.hero-side,.aurora span,.win{animation:none!important}}
+.glance .g-h{color:#fff;font-size:1rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0;font-family:var(--h);letter-spacing:0}
+.glance .g-h small{font-family:var(--b);font-weight:500;font-size:.72rem;color:#000;background:var(--gold);padding:3px 8px;border-radius:6px}
+@media(max-width:360px){.glance dd{font-size:1.12rem}}
+/* contrast */
+.dark .sub,#process .sub{color:#C9C9D2}
+.step p{color:#B9B9C3}
+.f-info{color:#A3A3AD!important}
+.trust .dot{color:#8E8E99}
+.rate-big .stars{color:#C98A00}
+.svc .go{color:#0B6B33}
+.svc .go:hover{color:#0B2E1A}
+/* focus and press */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #F2A900;outline-offset:3px;border-radius:10px}
+.btn,.go,.qa,.rt a{transition:transform .15s ease,background .2s,color .2s,box-shadow .2s}
+.btn:hover,.rt a:hover{transform:translateY(-2px)}
+.btn:active,.go:active,.qa:active,.rt a:active{transform:translateY(1px) scale(.98)}
+.qa:hover{transform:translateY(-2px)}
+#why-photo{overflow:hidden}
+#why-photo img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+#why-photo:hover img{transform:scale(1.03)}
+/* testimonial quote mark inside the card (was cut off) */
+.tq-mark{top:18px;right:18px;padding-top:9px}
+.tq .tq-h{padding-right:48px}
+/* services: titles, text, lists and buttons line up across a row */
+@media(min-width:1000px){.svc-grid{grid-auto-rows:auto}.svc{display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0;align-content:start}.svc .go{align-self:end}}
+/* closing band: no grid lines */
+.final::before{background-image:none!important;-webkit-mask-image:none;mask-image:none;background:transparent}
+
+.win{z-index:6}
+.qs .lbl{display:flex;justify-content:center;width:100%}
+#questions,#services{background:none}
+.svc .tag,.svc .ico{justify-self:start;align-self:start}
+.hero>.wrap,.hero>.statwrap{width:100%}
+@media(max-width:999px){.hero{padding-top:136px}}
+@media(min-width:1000px) and (max-width:1199px){.hero{padding-top:150px}.w1{top:-50px;left:-24px}.glance dd{font-size:1.2rem}.st{padding:16px 12px;gap:10px}.sti{width:40px;height:40px}.sti svg{width:20px;height:20px}.st b{font-size:1.4rem}.st span{font-size:.74rem}}
+
+/* Mavix LP lessons: round WhatsApp button on phones, shorter phone page, no dead clicks */
+@media(max-width:899px){.sticky{display:none!important}.fab{display:grid;width:58px;height:58px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom))}}
+@media(max-width:700px){.svc ul{display:none}.svc p{margin-bottom:18px}#why-photo{display:none}}
+.rate-chips a{padding:7px 12px;border-radius:999px;background:#111;color:#FFD46B;font-size:.78rem;font-weight:600;font-family:var(--h);text-decoration:none;transition:transform .15s,background .2s}
+.rate-chips a:hover{background:#2A2A2E;transform:translateY(-2px)}
+a.win{text-decoration:none}
+a.win:hover b{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -584,7 +649,6 @@ footer{background:#000}
 <main>
 <section class="hero" id="top">
  <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
- <svg class="skyline" aria-hidden="true" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice"><path d="M0 260V214h40v-22h26v-30h22v52h30v-64h18v-20h20v84h34v-46h24v-28h16v74h28v-96h12v-24h14v120h30v-58h40v-36h22v94h18v-60h30v-30h14v-18h12v108h26v-78h36v78h22v-120h10v-22h6l6-40 4-58 3-40 3 40 4 58 6 40h6v22h10v120h22v-90h30v-36h18v126h30v-70h26v-22h20v92h34v-112h16v-18h14v130h28v-62h40v-24h22v86h26v-56h30v-34h16v90h34v-48h28v-20h24v68h40v-36h30v-24h22v60h40V260Z"/></svg>
  <div class="wrap hero-grid">
   <div>
    <span class="pill"><i class="flag" aria-hidden="true"></i><span id="h-pill">VARA · ADGM · DIFC · CBUAE licensing</span></span>
@@ -596,10 +660,10 @@ footer{background:#000}
    <p class="trust"><span class="stars" aria-label="5 out of 5">★★★★★</span> 5.0 on Google <span class="dot">·</span> 10+ licences secured <span class="dot">·</span> Free first call</p>
   </div>
   <div class="hero-side">
-  <div class="win w1"><span class="wi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>VARA Exchange licence</b><small>secured for a client</small></div></div>
-  <div class="win w2"><span class="wi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>FSRA custody, ADGM</b><small>secured for a client</small></div></div>
+  <a class="win w1" href="#proof"><span class="wi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>VARA Exchange licence</b><small>secured for a client</small></div></a>
+  <a class="win w2" href="#proof"><span class="wi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>FSRA custody, ADGM</b><small>secured for a client</small></div></a>
   <aside class="glance" aria-label="VARA licence at a glance">
-   <h3>VARA licence at a glance <small>2026</small></h3>
+   <h2 class="g-h">VARA licence at a glance <small>2026</small></h2>
    <dl>
     <div><dt>Application fee from</dt><dd>AED 40,000</dd></div>
     <div><dt>Annual fee from</dt><dd>AED 80,000</dd></div>
@@ -611,9 +675,9 @@ footer{background:#000}
   </aside>
   </div>
  </div>
-</section>
+<div class="statwrap"><div class="wrap"><div class="statcard"><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><div><b>10+</b><span>years in legal practice</span></div></div><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>10+</b><span>licences secured</span></div></div><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></svg></span><div><b>5</b><span>UAE regulators covered</span></div></div><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span><div><b>25+</b><span>banking and industry partners</span></div></div><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span><div><b>5.0</b><span>rating on Google</span></div></div></div></section>
 
-<div class="statwrap"><div class="wrap"><div class="statcard"><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><div><b>10+</b><span>years in legal practice</span></div></div><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>10+</b><span>licences secured</span></div></div><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></svg></span><div><b>5</b><span>UAE regulators covered</span></div></div><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span><div><b>25+</b><span>banking and industry partners</span></div></div><div class="st"><span class="sti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span><div><b>5.0</b><span>rating on Google</span></div></div></div></div></div>
+</div></div>
 
 <section class="qs" id="questions" aria-label="Common questions">
  <div class="wrap">
@@ -646,18 +710,38 @@ footer{background:#000}
   </div>
  </div>
 </section>
+<section id="proof">
+ <div class="wrap">
+  <div class="lbl">Trusted by founders</div>
+  <h2 class="big">What clients say</h2>
+  <p class="sub">Client names are withheld with their permission.</p>
+  <div class="rate-row"><div class="rate-big"><b>5.0</b><div><span class="stars">★★★★★</span><small>on Google</small></div></div><div class="rate-chips"><a href="#routes">VARA</a><a href="#routes">ADGM · FSRA</a><a href="#routes">DIFC · DFSA</a><a href="#routes">CBUAE</a></div><p>Real licences our clients hold, across four UAE regulators</p></div>
+  <div class="tst rv" role="list">
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They understood how our exchange and custody operations fit together.&rdquo;</p><p>&ldquo;Running an exchange with in-house custody meant we had to explain what happens to client assets from the moment a trade is placed through settlement and withdrawal. CRYPTOVERSE helped us put that into a clear application and supported us through to securing our VARA Exchange Services licence with in-house custody.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Exchange Services with in-house custody</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They helped us get the custody arrangement right before we filed.&rdquo;</p><p>&ldquo;We knew who we wanted as our custodian. What we needed was clarity on what the custodian would handle and what would still sit with us as the broker-dealer. CRYPTOVERSE helped us work through that distinction and secure our VARA Broker-Dealer Services licence with an outsourced custody model.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Broker-Dealer Services with outsourced custody</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They made four regulated activities make sense in one application.&rdquo;</p><p>&ldquo;Our model covered Broker-Dealer Services, VA Management and Investment Services, Transfer and Settlement Services, and Lending and Borrowing Services. CRYPTOVERSE helped us explain how the four activities worked together on one platform and supported us through to securing VARA approval for all four.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA authorisation across four virtual asset activities</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They helped us secure both the brokerage and custody permissions we needed.&rdquo;</p><p>&ldquo;Executing trades and safeguarding client assets were both central to our business. CRYPTOVERSE helped us define the responsibilities of each function and explain how they would work together. We secured VARA authorisation for Broker-Dealer Services and Custody Services.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Broker-Dealer and Custody Services</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They could speak to our lawyers and our engineers.&rdquo;</p><p>&ldquo;For a custody business, the details matter. Who can sign a transaction? How are assets segregated? What happens if something goes wrong? CRYPTOVERSE helped us turn those technical answers into a clear regulatory submission and supported us through to securing FSRA authorisation in ADGM.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>FSRA Custody Services, ADGM</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They understood how money actually moves through our product.&rdquo;</p><p>&ldquo;Our platform combined stored balances and retail payments. CRYPTOVERSE helped us map the flow of customer funds, explain our safeguarding and settlement arrangements, and present both parts of the business clearly. We secured our Stored Value Facilities and Retail Payment Services and Card Schemes licences from the Central Bank of the UAE.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>CBUAE SVF and RPSCS</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;We came away with a licence and a clearer advisory model.&rdquo;</p><p>&ldquo;CRYPTOVERSE helped us define what our advisers would do for clients, how we would be paid, and where our advisory role ended. That clarity shaped the application and gave our team a model we could put into practice once we secured our DFSA authorisation in the DIFC.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>DFSA Advisory Services, DIFC</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They understood what it takes to build a custody business.&rdquo;</p><p>&ldquo;CRYPTOVERSE helped us explain the controls that mattered most to our business, from who could authorise a withdrawal to how we would protect client assets if something went wrong. They guided us through the application process, and we secured our standalone VARA Custody Services licence.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Custody Services</span></figcaption></figure>
+   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They helped us make three moving parts work together.&rdquo;</p><p>&ldquo;We were applying for both Exchange and Broker-Dealer Services while working with an external custodian. CRYPTOVERSE helped us show how orders would be executed, how assets would settle, and where responsibility passed to the custodian. We secured VARA authorisation for both activities with our outsourced custody model.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Exchange and Broker-Dealer Services with outsourced custody</span></figcaption></figure>
+  </div>
+  <p class="tst-hint">Swipe for more &rarr;</p>
+ </div>
+</section>
 
 <section style="padding-top:0">
  <div class="wrap split">
   <div class="photo rv" id="why-photo">
    <img src="assets/band-dubai.jpg" alt="Dubai skyline at night" loading="lazy">
-   <div class="cap"><svg width="22" height="22" style="color:var(--gold);flex:none"><use href="#pin"/></svg><span><b>Media One Tower</b>Dubai Media City, UAE</span></div>
+   
   </div>
   <div class="rv">
    <div class="lbl">Why founders choose Cryptoverse</div>
    <h2 class="big">Crypto lawyers in Dubai, with you from first question to licence</h2>
    <p class="sub">Most licence delays come from thin applications and slow answers to the regulator. We write the documents ourselves and stay with you after approval.</p>
-   <div class="why-stats"><span><b>10+</b>licences secured</span><span><b>5</b>UAE regulators</span><span><b>10+</b>years in legal practice</span></div>
+   
    <div class="why">
     <div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>Lawyer-led, start to finish</b><p>The same team advises you, drafts your file and answers the regulator.</p></div>
     <div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span><b>Your full application, drafted</b><p>Regulatory business plan, risk assessment, AML/CFT manual, Travel Rule and policies.</p></div>
@@ -720,9 +804,9 @@ footer{background:#000}
   <p class="sub">You run the business. We prepare, file and answer the regulator.</p>
   <div class="steps">
    <div class="step rv"><span class="stp-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><h3>Free consultation</h3><p>Your model, the right regulator, budget and timeline.</p></div>
-   <div class="step rv"><span class="stp-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/></svg></span><h3>Company and structure</h3><p>Entity, free zone, shareholding and key people.</p></div>
+   <div class="step rv"><span class="stp-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/></svg></span><h3>Company set-up</h3><p>Entity, free zone, shareholding and key people.</p></div>
    <div class="step rv"><span class="stp-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><h3>Your application pack</h3><p>Regulatory business plan, AML/CFT manual, policies, fit-and-proper documents.</p></div>
-   <div class="step rv"><span class="stp-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg></span><h3>Filing and regulator Q&amp;A</h3><p>We submit, answer every question and keep the file moving.</p></div>
+   <div class="step rv"><span class="stp-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg></span><h3>Filing and Q&amp;A</h3><p>We submit, answer every question and keep the file moving.</p></div>
    <div class="step rv"><span class="stp-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><h3>Licensed and live</h3><p>Bank accounts, compliance set-up and ongoing support.</p></div>
   </div>
   <div style="margin-top:34px;text-align:center"><a class="btn btn-wa" href="#" data-wa data-svc="process" data-loc="process"><svg><use href="#wa"/></svg>Start with a free consultation</a></div>
@@ -730,29 +814,10 @@ footer{background:#000}
 </section>
 
 <!--SOCIAL-PROOF-START-->
-<section id="proof">
- <div class="wrap">
-  <div class="lbl">Trusted by founders</div>
-  <h2 class="big">What clients say</h2>
-  <p class="sub">Client names are withheld with their permission.</p>
-  <div class="rate-row"><div class="rate-big"><b>5.0</b><div><span class="stars">★★★★★</span><small>on Google</small></div></div><div class="rate-chips"><span>VARA</span><span>ADGM · FSRA</span><span>DIFC · DFSA</span><span>CBUAE</span></div><p>Real licences our clients hold, across four UAE regulators</p></div>
-  <div class="tst rv" role="list">
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They understood how our exchange and custody operations fit together.&rdquo;</p><p>&ldquo;Running an exchange with in-house custody meant we had to explain what happens to client assets from the moment a trade is placed through settlement and withdrawal. CRYPTOVERSE helped us put that into a clear application and supported us through to securing our VARA Exchange Services licence with in-house custody.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Exchange Services with in-house custody</span></figcaption></figure>
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They helped us get the custody arrangement right before we filed.&rdquo;</p><p>&ldquo;We knew who we wanted as our custodian. What we needed was clarity on what the custodian would handle and what would still sit with us as the broker-dealer. CRYPTOVERSE helped us work through that distinction and secure our VARA Broker-Dealer Services licence with an outsourced custody model.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Broker-Dealer Services with outsourced custody</span></figcaption></figure>
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They made four regulated activities make sense in one application.&rdquo;</p><p>&ldquo;Our model covered Broker-Dealer Services, VA Management and Investment Services, Transfer and Settlement Services, and Lending and Borrowing Services. CRYPTOVERSE helped us explain how the four activities worked together on one platform and supported us through to securing VARA approval for all four.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA authorisation across four virtual asset activities</span></figcaption></figure>
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They helped us secure both the brokerage and custody permissions we needed.&rdquo;</p><p>&ldquo;Executing trades and safeguarding client assets were both central to our business. CRYPTOVERSE helped us define the responsibilities of each function and explain how they would work together. We secured VARA authorisation for Broker-Dealer Services and Custody Services.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Broker-Dealer and Custody Services</span></figcaption></figure>
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They could speak to our lawyers and our engineers.&rdquo;</p><p>&ldquo;For a custody business, the details matter. Who can sign a transaction? How are assets segregated? What happens if something goes wrong? CRYPTOVERSE helped us turn those technical answers into a clear regulatory submission and supported us through to securing FSRA authorisation in ADGM.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>FSRA Custody Services, ADGM</span></figcaption></figure>
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They understood how money actually moves through our product.&rdquo;</p><p>&ldquo;Our platform combined stored balances and retail payments. CRYPTOVERSE helped us map the flow of customer funds, explain our safeguarding and settlement arrangements, and present both parts of the business clearly. We secured our Stored Value Facilities and Retail Payment Services and Card Schemes licences from the Central Bank of the UAE.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>CBUAE SVF and RPSCS</span></figcaption></figure>
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;We came away with a licence and a clearer advisory model.&rdquo;</p><p>&ldquo;CRYPTOVERSE helped us define what our advisers would do for clients, how we would be paid, and where our advisory role ended. That clarity shaped the application and gave our team a model we could put into practice once we secured our DFSA authorisation in the DIFC.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>DFSA Advisory Services, DIFC</span></figcaption></figure>
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They understood what it takes to build a custody business.&rdquo;</p><p>&ldquo;CRYPTOVERSE helped us explain the controls that mattered most to our business, from who could authorise a withdrawal to how we would protect client assets if something went wrong. They guided us through the application process, and we secured our standalone VARA Custody Services licence.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Custody Services</span></figcaption></figure>
-   <figure class="tq" role="listitem"><span class="tq-mark" aria-hidden="true">&ldquo;</span><blockquote><p class="tq-h">&ldquo;They helped us make three moving parts work together.&rdquo;</p><p>&ldquo;We were applying for both Exchange and Broker-Dealer Services while working with an external custodian. CRYPTOVERSE helped us show how orders would be executed, how assets would settle, and where responsibility passed to the custodian. We secured VARA authorisation for both activities with our outsourced custody model.&rdquo;</p></blockquote><figcaption><span class="tq-who">Anonymous client</span><span class="tq-tag"><i class="tq-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>VARA Exchange and Broker-Dealer Services with outsourced custody</span></figcaption></figure>
-  </div>
-  <p class="tst-hint">Swipe for more &rarr;</p>
- </div>
-</section>
+
 <!--SOCIAL-PROOF-END-->
 
-<section style="padding-top:0" id="faq">
+<section id="faq">
  <div class="wrap faq-wrap">
   <div class="lbl">Questions</div>
   <h2 class="big">What founders ask us first</h2>
@@ -770,7 +835,7 @@ footer{background:#000}
 <section class="final">
  <div class="bg"><img src="assets/band-dubai.jpg" alt="" loading="lazy"></div>
  <div class="wrap rv">
-  <span class="pill"><i class="flag" aria-hidden="true"></i>Dubai Media City, UAE</span>
+  <span class="pill"><i class="flag" aria-hidden="true"></i>WhatsApp answered 24/7</span>
   <h2>Know your route and your costs<br>before you commit</h2>
   <p>Send us one message. A crypto lawyer replies with the right regulator, the real costs and a realistic timeline.</p>
   <div class="cta-row">
@@ -784,7 +849,7 @@ footer{background:#000}
 </main>
 
 <footer><div class="wrap">
- <p class="f-info">Media One Tower, Dubai Media City · Mon to Fri, 9 am to 6 pm (GST) · WhatsApp answered 24/7 · <a href="tel:+971522352234" data-track="phone" data-loc="office">+971 52 235 2234</a> · <a href="mailto:info@cryptoverselawyers.io">info@cryptoverselawyers.io</a></p>
+ <p class="f-info">Media One Tower, Dubai Media City · WhatsApp answered 24/7 · <a href="tel:+971522352234" data-track="phone" data-loc="office">+971 52 235 2234</a> · <a href="mailto:info@cryptoverselawyers.io">info@cryptoverselawyers.io</a></p>
  <p>© 2026 Cryptoverse Legal Consultancy · <a href="https://www.cryptoverselawyers.io/">cryptoverselawyers.io</a> · <a href="https://www.cryptoverselawyers.io/privacy-policy/">Privacy policy</a></p>
  <p>This page gives general information, not legal advice. Regulator names are used for information only and do not imply endorsement. Cryptoverse Legal does not offer investment, trading or fund-recovery services. Dubai skyline photography: Unsplash.</p>
 </div></footer>
