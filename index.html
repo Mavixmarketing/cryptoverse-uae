@@ -624,6 +624,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #F2
 .rate-chips a:hover{background:#2A2A2E;transform:translateY(-2px)}
 a.win{text-decoration:none}
 a.win:hover b{text-decoration:underline}
+
+/* v6 19 Nov: stats icons line up with the number; testimonial gold bar clipped to the card */
+.st{align-items:flex-start}
+.st>div{min-height:0;justify-content:flex-start}
+.st b{margin-top:6px}
+@media(min-width:1000px) and (max-width:1199px){.st b{margin-top:5px}}
+@media(max-width:999px){.st{flex-direction:column;gap:12px;padding:20px 18px}.st b{margin-top:0}.st:last-child{flex-direction:row;align-items:center}.st:last-child b{margin-top:0}}
+@media(max-width:600px){.st{padding:16px 14px;gap:10px}}
+.tq{overflow:hidden;isolation:isolate}
+.tq::before{left:0;right:0;top:0;border-radius:0}
+.tq{border:0;box-shadow:inset 0 0 0 1px #EFE7D2,0 14px 40px -28px rgba(0,0,0,.35)}
+.tq:hover{box-shadow:inset 0 0 0 1px #EFE7D2,0 24px 50px -28px rgba(0,0,0,.45)}
 </style>
 </head>
 <body>
