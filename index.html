@@ -267,6 +267,33 @@ footer a{color:#9A9AA4;text-decoration:none}
 .qa{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;border:1px solid var(--line);border-radius:var(--r);background:#fff;color:var(--text);text-decoration:none;font-family:var(--h);font-weight:600;font-size:1rem;line-height:1.35;transition:border-color .2s,box-shadow .2s,transform .2s}
 .qa svg{width:22px;height:22px;flex:none;color:var(--wa)}
 .qa:hover{border-color:var(--wa);box-shadow:0 8px 24px rgba(37,211,102,.14);transform:translateY(-1px)}
+
+/* centered section heads */
+#proof .wrap>.lbl,#process .wrap>.lbl,#routes .wrap>.lbl,#services .wrap>.lbl{display:flex;justify-content:center}
+#proof h2.big,#process h2.big,#routes h2.big,#services h2.big{text-align:center}
+#proof .wrap>.sub,#process .wrap>.sub,#routes .wrap>.sub,#services .wrap>.sub{text-align:center;margin-left:auto;margin-right:auto}
+/* icons */
+.ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:var(--gold-soft);color:var(--gold-text);margin-bottom:14px;flex:none}
+.ico svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* why: proof chips + icon cards */
+.why-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.why-stats span{display:inline-flex;align-items:baseline;gap:6px;padding:8px 14px;border-radius:999px;background:var(--black);color:#C9C9D2;font-size:.84rem}
+.why-stats b{color:var(--gold);font-family:var(--h);font-size:1.05rem}
+.why{gap:14px}
+.why div{border-top:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s}
+.why div:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(21,21,26,.08);border-color:#D8D3C4}
+.why .ico{width:42px;height:42px;margin-bottom:12px}
+/* services: equal cards, check bullets, button pinned to bottom */
+.svc{display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(21,21,26,.10)}
+.svc ul{list-style:none;padding:0;margin:14px 0 22px;display:grid;gap:9px}
+.svc li{position:relative;padding-left:28px;line-height:1.45}
+.svc li::before{content:"";position:absolute;left:0;top:.12em;width:19px;height:19px;border-radius:50%;background:var(--gold-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238F6200' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+.svc .go{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:12px;border:1.5px solid var(--wa);color:#128C4A;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
+.svc .go:hover{background:var(--wa);color:#0B2E1A}
+.svc.feat .ico{background:var(--gold);color:#111}
+.svc.feat li::before{background-color:rgba(242,169,0,.18)}
+.svc.feat .go{background:var(--wa);border-color:var(--wa);color:#0B2E1A}
 </style>
 </head>
 <body>
@@ -350,12 +377,12 @@ footer a{color:#9A9AA4;text-decoration:none}
   <h2 class="big">Pick what you need. <span style="color:var(--gold-text)">We'll reply on WhatsApp.</span></h2>
   <p class="sub">One tap opens WhatsApp with your question already written. No forms, no waiting for a callback.</p>
   <div class="svc-grid">
-   <article class="svc feat rv"><span class="tag">Most requested</span><h3>VARA licence, Dubai</h3><p>For exchanges, broker-dealers, custodians, lending, transfer and token issuance in Dubai.</p><ul><li>Activity and capital plan</li><li>Regulatory business plan, AML/CFT manual, policies</li><li>Filing and VARA's questions handled</li></ul><a class="go" href="#" data-wa data-svc="vara" data-loc="svc"><svg><use href="#wa"/></svg>Ask about a VARA licence</a></article>
-   <article class="svc rv"><span class="tag">Start here</span><h3>Crypto company setup in Dubai</h3><p>The right entity, free zone and shareholding for the licence you need, set up in the right order.</p><ul><li>Free zone or mainland, compared</li><li>Company formation and visas</li><li>Ready for the licence application</li></ul><a class="go" href="#" data-wa data-svc="setup" data-loc="svc"><svg><use href="#wa"/></svg>Ask about company setup</a></article>
-   <article class="svc rv"><span class="tag">Abu Dhabi and DIFC</span><h3>ADGM and DIFC licences</h3><p>For institutional platforms, custody, funds and token businesses that want an international financial centre.</p><ul><li>FSRA (ADGM) and DFSA (DIFC) applications</li><li>Capital and fee planning</li><li>Regulator meetings and Q&amp;A</li></ul><a class="go" href="#" data-wa data-svc="adgm_difc" data-loc="svc"><svg><use href="#wa"/></svg>Ask about ADGM or DIFC</a></article>
-   <article class="svc rv"><span class="tag">Banking</span><h3>Crypto-friendly bank accounts</h3><p>Bank, EMI and exchange accounts for crypto businesses, with a clean licence file behind the application.</p><ul><li>Onboarding pack prepared</li><li>Introductions to crypto-friendly institutions</li><li>Corporate and settlement accounts</li></ul><a class="go" href="#" data-wa data-svc="bank" data-loc="svc"><svg><use href="#wa"/></svg>Ask about bank accounts</a></article>
-   <article class="svc rv"><span class="tag">Payments</span><h3>Stablecoins and payment tokens</h3><p>CBUAE licensing for payment token services and stablecoin businesses under the new Central Bank law.</p><ul><li>Payment token and stored value routes</li><li>Reserve and capital planning</li><li>Licensing and compliance set-up</li></ul><a class="go" href="#" data-wa data-svc="cbuae" data-loc="svc"><svg><use href="#wa"/></svg>Ask about CBUAE licensing</a></article>
-   <article class="svc rv"><span class="tag">Tokens</span><h3>Token launch and RWA tokenisation</h3><p>Structuring and licensing for token issuance and real-world-asset tokenisation in the UAE.</p><ul><li>Token and legal structure</li><li>Issuance rules and disclosures</li><li>White paper legal review</li></ul><a class="go" href="#" data-wa data-svc="token" data-loc="svc"><svg><use href="#wa"/></svg>Ask about a token launch</a></article>
+   <article class="svc feat rv"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="tag">Most requested</span><h3>VARA licence, Dubai</h3><p>For exchanges, broker-dealers, custodians, lending, transfer and token issuance in Dubai.</p><ul><li>Activity and capital plan</li><li>Regulatory business plan, AML/CFT manual, policies</li><li>Filing and VARA's questions handled</li></ul><a class="go" href="#" data-wa data-svc="vara" data-loc="svc"><svg><use href="#wa"/></svg>Ask about a VARA licence</a></article>
+   <article class="svc rv"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span><span class="tag">Start here</span><h3>Crypto company setup in Dubai</h3><p>The right entity, free zone and shareholding for the licence you need, set up in the right order.</p><ul><li>Free zone or mainland, compared</li><li>Company formation and visas</li><li>Ready for the licence application</li></ul><a class="go" href="#" data-wa data-svc="setup" data-loc="svc"><svg><use href="#wa"/></svg>Ask about company setup</a></article>
+   <article class="svc rv"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></svg></span><span class="tag">Abu Dhabi and DIFC</span><h3>ADGM and DIFC licences</h3><p>For institutional platforms, custody, funds and token businesses that want an international financial centre.</p><ul><li>FSRA (ADGM) and DFSA (DIFC) applications</li><li>Capital and fee planning</li><li>Regulator meetings and Q&amp;A</li></ul><a class="go" href="#" data-wa data-svc="adgm_difc" data-loc="svc"><svg><use href="#wa"/></svg>Ask about ADGM or DIFC</a></article>
+   <article class="svc rv"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></span><span class="tag">Banking</span><h3>Crypto-friendly bank accounts</h3><p>Bank, EMI and exchange accounts for crypto businesses, with a clean licence file behind the application.</p><ul><li>Onboarding pack prepared</li><li>Introductions to crypto-friendly institutions</li><li>Corporate and settlement accounts</li></ul><a class="go" href="#" data-wa data-svc="bank" data-loc="svc"><svg><use href="#wa"/></svg>Ask about bank accounts</a></article>
+   <article class="svc rv"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></span><span class="tag">Payments</span><h3>Stablecoins and payment tokens</h3><p>CBUAE licensing for payment token services and stablecoin businesses under the new Central Bank law.</p><ul><li>Payment token and stored value routes</li><li>Reserve and capital planning</li><li>Licensing and compliance set-up</li></ul><a class="go" href="#" data-wa data-svc="cbuae" data-loc="svc"><svg><use href="#wa"/></svg>Ask about CBUAE licensing</a></article>
+   <article class="svc rv"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span><span class="tag">Tokens</span><h3>Token launch and RWA tokenisation</h3><p>Structuring and licensing for token issuance and real-world-asset tokenisation in the UAE.</p><ul><li>Token and legal structure</li><li>Issuance rules and disclosures</li><li>White paper legal review</li></ul><a class="go" href="#" data-wa data-svc="token" data-loc="svc"><svg><use href="#wa"/></svg>Ask about a token launch</a></article>
   </div>
  </div>
 </section>
@@ -370,11 +397,12 @@ footer a{color:#9A9AA4;text-decoration:none}
    <div class="lbl">Why founders choose Cryptoverse</div>
    <h2 class="big">Crypto lawyers in Dubai, with you from first question to licence</h2>
    <p class="sub">Most licence delays come from thin applications and slow answers to the regulator. We write the documents ourselves and stay with you after approval.</p>
+   <div class="why-stats"><span><b>10+</b>licences secured</span><span><b>5</b>UAE regulators</span><span><b>10+</b>years in legal practice</span></div>
    <div class="why">
-    <div><b>Lawyer-led, start to finish</b><p>The same team advises you, drafts your file and answers the regulator.</p></div>
-    <div><b>Your full application, drafted</b><p>Regulatory business plan, risk assessment, AML/CFT manual, Travel Rule and policies.</p></div>
-    <div><b>All five UAE regulators</b><p>VARA, ADGM, DIFC, CMA and CBUAE compared for your model, so you pick right first time.</p></div>
-    <div><b>After the licence too</b><p>Bank accounts, compliance, reporting and changes as you grow.</p></div>
+    <div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>Lawyer-led, start to finish</b><p>The same team advises you, drafts your file and answers the regulator.</p></div>
+    <div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span><b>Your full application, drafted</b><p>Regulatory business plan, risk assessment, AML/CFT manual, Travel Rule and policies.</p></div>
+    <div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></svg></span><b>All five UAE regulators</b><p>VARA, ADGM, DIFC, CMA and CBUAE compared for your model, so you pick right first time.</p></div>
+    <div><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></svg></span><b>After the licence too</b><p>Bank accounts, compliance, reporting and changes as you grow.</p></div>
    </div>
   </div>
  </div>
@@ -461,7 +489,7 @@ footer a{color:#9A9AA4;text-decoration:none}
  <div class="bg"><img src="assets/band-dubai.jpg" alt="" loading="lazy"></div>
  <div class="wrap rv">
   <span class="pill"><i class="flag" aria-hidden="true"></i>Dubai Media City, UAE</span>
-  <h2>Know your route and your costs before you commit</h2>
+  <h2>Know your route and your costs<br>before you commit</h2>
   <p>Send us one message. A crypto lawyer replies with the right regulator, the real costs and a realistic timeline.</p>
   <div class="cta-row">
    <a class="btn btn-wa" href="#" data-wa data-svc="final" data-loc="final"><svg><use href="#wa"/></svg>Chat on WhatsApp</a>
