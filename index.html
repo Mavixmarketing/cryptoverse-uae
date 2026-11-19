@@ -478,6 +478,13 @@ footer{background:#000}
 .trust .stars{color:var(--gold);letter-spacing:2px;margin-right:4px}
 .trust .dot{opacity:.4;margin:0 6px}
 @media(max-width:600px){.trust .dot{margin:0 3px}.trust .dot:last-of-type{display:none}.btn-xl{width:100%}}
+
+.rt-head,.rt-row{grid-template-columns:1.1fr 1.5fr 1.7fr 190px}
+.rt-do{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--text);line-height:1.4}
+.rt-do .ck{flex:none;width:20px;height:20px;border-radius:50%;margin-top:1px;background:var(--gold-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238F6200' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+.rt-go{height:44px;padding:0 14px;white-space:nowrap}
+.cmp-foot p{font-size:.95rem;color:var(--body);max-width:60ch}
+@media(max-width:999px){.rt-row{grid-template-columns:1fr}.rt-do::before{display:none}.rt-do{flex-wrap:nowrap}}
 </style>
 </head>
 <body>
@@ -593,58 +600,43 @@ footer{background:#000}
 <section style="background:var(--paper)" id="routes">
  <div class="wrap">
   <div class="lbl">The five UAE routes</div>
-  <h2 class="big">VARA, ADGM, DIFC, CMA or CBUAE?</h2>
-  <p class="sub">The UAE has five crypto regulators. Each covers different places and activities. Here they are side by side, with the lowest published regulator figures.</p>
-  <div class="rt rv" role="table" aria-label="UAE crypto regulators compared">
-  <div class="rt-head" role="row"><span>Regulator</span><span>Best for</span><span>Application fee</span><span>Annual fee</span><span>Capital</span><span>Typical timeline</span><span></span></div>
+  <h2 class="big">VARA, ADGM, DIFC, CMA or CBUAE? <span class="gtxt">We'll tell you which fits.</span></h2>
+  <p class="sub">Each regulator covers different places, activities and budgets, and picking the wrong one can cost you months. Tell us what you're building and a crypto lawyer tells you the right route, the full cost and the timeline. The first call is free.</p>
+  <div class="rt rv" role="table" aria-label="UAE crypto regulators">
+  <div class="rt-head" role="row"><span>Regulator</span><span>Best for</span><span>What we handle for you</span><span></span></div>
   <div class="rt-row hl" role="row">
    <div class="rt-name"><b>VARA</b><small>Dubai, outside DIFC</small><em>Most common</em></div>
    <div class="rt-c rt-best" data-l="Best for">Exchanges, brokers, custody, lending, token issuance</div>
-   <div class="rt-c" data-l="Application fee"><b>AED 40,000</b><small>per activity</small></div>
-   <div class="rt-c" data-l="Annual fee"><b>AED 80,000</b><small>per activity</small></div>
-   <div class="rt-c" data-l="Capital"><b>AED 100,000</b><small>advisory</small></div>
-   <div class="rt-c" data-l="Typical timeline"><b>6–12 months</b><span class="mbar"><i style="left:33.3%;width:33.3%"></i></span></div>
-   <a class="rt-go" href="#" data-wa data-svc="vara" data-loc="compare" aria-label="Ask about VARA on WhatsApp"><svg><use href="#wa"/></svg><span>Ask</span></a>
+   <div class="rt-c rt-do" data-l="What we handle for you"><span class="ck"></span>Activity plan, full application and every VARA question</div>
+   <a class="rt-go" href="#" data-wa data-svc="vara" data-loc="compare"><svg><use href="#wa"/></svg><span>Ask about VARA</span></a>
   </div>
   <div class="rt-row" role="row">
    <div class="rt-name"><b>ADGM · FSRA</b><small>Abu Dhabi Global Market</small></div>
    <div class="rt-c rt-best" data-l="Best for">Institutional platforms, custody, funds</div>
-   <div class="rt-c" data-l="Application fee"><b>USD 15,000</b><small>+ USD 20,000 crypto add-on</small></div>
-   <div class="rt-c" data-l="Annual fee"><b>USD 15,000</b><small>+ USD 15,000 add-on</small></div>
-   <div class="rt-c" data-l="Capital"><b>USD 50,000</b><small>advisory</small></div>
-   <div class="rt-c" data-l="Typical timeline"><b>6–8 months</b><span class="mbar"><i style="left:33.3%;width:11.1%"></i></span></div>
-   <a class="rt-go" href="#" data-wa data-svc="adgm_difc" data-loc="compare" aria-label="Ask about ADGM on WhatsApp"><svg><use href="#wa"/></svg><span>Ask</span></a>
+   <div class="rt-c rt-do" data-l="What we handle for you"><span class="ck"></span>FSRA application, capital plan and regulator meetings</div>
+   <a class="rt-go" href="#" data-wa data-svc="adgm_difc" data-loc="compare"><svg><use href="#wa"/></svg><span>Ask about ADGM</span></a>
   </div>
   <div class="rt-row" role="row">
    <div class="rt-name"><b>DIFC · DFSA</b><small>Dubai Int'l Financial Centre</small></div>
    <div class="rt-c rt-best" data-l="Best for">Common-law financial centre, token services</div>
-   <div class="rt-c" data-l="Application fee"><b>USD 15,000</b><small>per activity</small></div>
-   <div class="rt-c" data-l="Annual fee"><b>USD 20,000</b></div>
-   <div class="rt-c" data-l="Capital"><b>USD 30,000</b><small>advisory</small></div>
-   <div class="rt-c" data-l="Typical timeline"><b>6–8 months</b><span class="mbar"><i style="left:33.3%;width:11.1%"></i></span></div>
-   <a class="rt-go" href="#" data-wa data-svc="adgm_difc" data-loc="compare" aria-label="Ask about DIFC on WhatsApp"><svg><use href="#wa"/></svg><span>Ask</span></a>
+   <div class="rt-c rt-do" data-l="What we handle for you"><span class="ck"></span>DFSA application, business plan and regulator Q&amp;A</div>
+   <a class="rt-go" href="#" data-wa data-svc="adgm_difc" data-loc="compare"><svg><use href="#wa"/></svg><span>Ask about DIFC</span></a>
   </div>
   <div class="rt-row" role="row">
    <div class="rt-name"><b>CMA</b><small>Federal, onshore UAE</small></div>
    <div class="rt-c rt-best" data-l="Best for">Onshore platforms and brokers</div>
-   <div class="rt-c" data-l="Application fee"><b>AED 80,000</b><small>incl. issuance</small></div>
-   <div class="rt-c" data-l="Annual fee"><b>AED 55,000</b></div>
-   <div class="rt-c" data-l="Capital"><b>AED 500,000</b><small>platform</small></div>
-   <div class="rt-c" data-l="Typical timeline"><b>4–7 months</b><span class="mbar"><i style="left:22.2%;width:16.7%"></i></span></div>
-   <a class="rt-go" href="#" data-wa data-svc="compare" data-loc="compare" aria-label="Ask about CMA on WhatsApp"><svg><use href="#wa"/></svg><span>Ask</span></a>
+   <div class="rt-c rt-do" data-l="What we handle for you"><span class="ck"></span>Licence route, application and filings</div>
+   <a class="rt-go" href="#" data-wa data-svc="compare" data-loc="compare"><svg><use href="#wa"/></svg><span>Ask about CMA</span></a>
   </div>
   <div class="rt-row" role="row">
    <div class="rt-name"><b>CBUAE</b><small>Central Bank of the UAE</small></div>
    <div class="rt-c rt-best" data-l="Best for">Payment tokens, AED stablecoins, payment firms</div>
-   <div class="rt-c" data-l="Application fee"><b>TBD</b><small>by CBUAE</small></div>
-   <div class="rt-c" data-l="Annual fee"><b>TBD</b><small>by CBUAE</small></div>
-   <div class="rt-c" data-l="Capital"><b>AED 1.5M</b><small>custody, conversion</small></div>
-   <div class="rt-c" data-l="Typical timeline"><b>12–18 months</b><span class="mbar"><i style="left:66.7%;width:33.3%"></i></span></div>
-   <a class="rt-go" href="#" data-wa data-svc="cbuae" data-loc="compare" aria-label="Ask about CBUAE on WhatsApp"><svg><use href="#wa"/></svg><span>Ask</span></a>
+   <div class="rt-c rt-do" data-l="What we handle for you"><span class="ck"></span>Payment token licensing, reserves and compliance set-up</div>
+   <a class="rt-go" href="#" data-wa data-svc="cbuae" data-loc="compare"><svg><use href="#wa"/></svg><span>Ask about CBUAE</span></a>
   </div>
   </div>
   <div class="cmp-foot">
-   <p>These are the lowest published regulator figures, for the simplest activities; exchange, broker-dealer and custody licences cost more. They exclude company setup, office, staff and our professional fees, which we quote separately in writing.</p>
+   <p>Not sure which one you need? Most founders aren't. Tell us what you're building and we'll give you your route, costs and timeline in writing before you commit.</p>
    <a class="btn btn-wa" href="#" data-wa data-svc="compare" data-loc="compare"><svg><use href="#wa"/></svg>Which one fits me?</a>
   </div>
  </div>
