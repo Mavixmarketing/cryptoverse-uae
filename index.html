@@ -312,6 +312,103 @@ footer a{color:#9A9AA4;text-decoration:none}
 .split:has(#why-photo){align-items:stretch}
 #why-photo{aspect-ratio:auto;min-height:420px;height:100%}
 @media(max-width:999px){#why-photo{aspect-ratio:4/3;height:auto;min-height:0}}
+
+/* ===== Theme refresh 19 Nov: client brand purple + gold, brighter, warmer ===== */
+:root{--brand:#2D0A6E;--brand-2:#4B1BA6;--ink:#12042B;--glow:rgba(242,169,0,.22)}
+.hdr{top:0}
+.hero{background:radial-gradient(900px 560px at 88% 12%,rgba(242,169,0,.22),transparent 60%),radial-gradient(820px 620px at 0% 100%,rgba(124,58,237,.42),transparent 62%),linear-gradient(155deg,#2B0A62 0%,#16052F 55%,#0A0318 100%);padding:140px 0 70px}
+.hero::before{background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:58px 58px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 60% 40%,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 60% 40%,#000 25%,transparent 75%)}
+.hero-fx{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;animation:float 14s ease-in-out infinite}
+.o1{width:380px;height:380px;background:#F2A900;top:-80px;right:6%;opacity:.28}
+.o2{width:460px;height:460px;background:#7C3AED;bottom:-160px;left:-120px;animation-delay:-5s}
+.o3{width:240px;height:240px;background:#25D366;top:42%;right:30%;opacity:.14;animation-delay:-9s}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-22px)}}
+.hero h1 span,.gtxt{background:linear-gradient(92deg,#FFD46B 0%,#F2A900 45%,#FF9F1C 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+#services .gtxt{background:linear-gradient(92deg,#C98A00,#8F6200);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pill{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+#h-cta{animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55),0 10px 30px -12px rgba(37,211,102,.75)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0),0 10px 30px -12px rgba(37,211,102,.75)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 10px 30px -12px rgba(37,211,102,.75)}}
+.btn{transition:transform .2s var(--ease),box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+/* chat mockup */
+.chat{background:#0B141A;border:1px solid rgba(255,255,255,.12);border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.7),0 0 0 6px rgba(255,255,255,.04)}
+.chat-top{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#1F2C33;color:#fff}
+.chat-top .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#F2A900,#FF9F1C);color:#1A0B00;font-family:var(--h);font-weight:700;font-size:.9rem;flex:none}
+.chat-top b{display:block;font-family:var(--h);font-size:.98rem}
+.chat-top small{display:flex;align-items:center;gap:6px;color:#8FA3AD;font-size:.78rem}
+.chat-top .on{width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 0 3px rgba(37,211,102,.2)}
+.chat-top .wa-i{width:22px;height:22px;margin-left:auto;color:#25D366}
+.chat-body{padding:16px 14px 6px;display:grid;gap:10px;background:#0B141A radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/16px 16px}
+.bub{max-width:88%;padding:10px 12px 18px;border-radius:12px;font-size:.88rem;line-height:1.45;position:relative;color:#E9EDEF}
+.bub .t{position:absolute;right:10px;bottom:4px;font-size:.68rem;color:#8FA3AD}
+.bub.me{justify-self:end;background:#005C4B;border-top-right-radius:4px}
+.bub.them{justify-self:start;background:#202C33;border-top-left-radius:4px}
+.bub p{margin:0 0 8px}
+.bub dl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 10px;padding:10px;border-radius:10px;background:rgba(255,255,255,.05)}
+.bub dt{font-size:.7rem;color:#8FA3AD}
+.bub dd{margin:0;font-family:var(--h);font-weight:700;color:#FFD46B;font-size:.95rem}
+.typing{justify-self:start;display:flex;gap:4px;padding:10px 12px;background:#202C33;border-radius:12px;border-top-left-radius:4px}
+.typing i{width:7px;height:7px;border-radius:50%;background:#8FA3AD;animation:dot 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+.chat-cta{width:calc(100% - 28px);margin:10px 14px 6px}
+.chat .src{padding:4px 16px 14px;font-size:.7rem;color:#7D8F98;line-height:1.45}
+.hq{background:rgba(255,255,255,.97)}
+/* proof bar + dark sections in brand purple */
+.proofbar{background:#16053A;border-top:1px solid rgba(255,255,255,.08)}
+.dark{background:radial-gradient(700px 400px at 90% 0%,rgba(242,169,0,.12),transparent 60%),linear-gradient(160deg,#21084F 0%,#100327 100%)}
+.step{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);transition:transform .25s var(--ease),border-color .25s}
+.step:hover{transform:translateY(-4px);border-color:rgba(242,169,0,.5)}
+/* light sections: warm glow */
+#services,#questions{background:radial-gradient(900px 420px at 50% 0%,rgba(242,169,0,.08),transparent 70%)}
+.qa{border-radius:16px}
+.qa:hover{background:#F2FFF7}
+/* final band: brand gradient instead of photo */
+.final{background:radial-gradient(700px 380px at 50% 0%,rgba(242,169,0,.25),transparent 65%),linear-gradient(160deg,#2B0A62 0%,#12042B 100%)}
+.final .bg{display:none}
+.final::before{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:58px 58px;background-color:transparent;-webkit-mask-image:radial-gradient(ellipse 60% 70% at 50% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 60% 70% at 50% 40%,#000 20%,transparent 75%)}
+footer{background:#0B0219}
+/* regulator cards */
+.regs{display:grid;gap:16px;margin-top:38px;grid-template-columns:repeat(5,minmax(0,1fr))}
+.reg{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 18px;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.reg:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(21,21,26,.1)}
+.reg.hl{background:linear-gradient(170deg,#2B0A62,#15052F);border-color:#2B0A62;color:#D9D3EA;box-shadow:0 20px 50px -18px rgba(43,10,98,.7)}
+.reg-top{min-height:76px}
+.reg-top h3{font-size:1.25rem;margin:0}
+.reg.hl h3{color:#fff}
+.reg-top small{display:block;font-size:.8rem;color:var(--muted);margin-top:2px}
+.reg.hl .reg-top small{color:#B9AED3}
+.reg-badge{display:inline-block;font-size:.68rem;font-weight:700;font-family:var(--h);background:var(--gold);color:#111;border-radius:999px;padding:3px 9px;margin-bottom:8px}
+.best{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px;min-height:56px;align-content:flex-start}
+.best span{font-size:.72rem;padding:4px 9px;border-radius:999px;background:var(--gold-soft);color:var(--gold-text);font-weight:600}
+.reg.hl .best span{background:rgba(242,169,0,.16);color:#FFD46B}
+.reg dl{margin:0;display:grid;gap:10px}
+.reg dt{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.reg.hl dt{color:#A99CC8}
+.reg dd{margin:2px 0 0;font-size:.86rem;line-height:1.35}
+.reg dd b{font-family:var(--h);font-size:1.08rem;color:var(--text)}
+.reg.hl dd b{color:#fff}
+.tl{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.reg.hl .tl{border-color:rgba(255,255,255,.12)}
+.tl-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.tl-h b{font-family:var(--h);font-size:.95rem;color:var(--text);text-transform:none;letter-spacing:0}
+.reg.hl .tl-h b{color:#FFD46B}
+.bar{position:relative;height:8px;border-radius:99px;background:#EEEAE0;margin:10px 0 5px}
+.reg.hl .bar{background:rgba(255,255,255,.12)}
+.bar i{position:absolute;top:0;bottom:0;border-radius:99px;background:linear-gradient(90deg,#F2A900,#FF9F1C)}
+.scale{display:flex;justify-content:space-between;font-size:.62rem;color:var(--muted)}
+.reg-go{margin-top:18px;display:flex;align-items:center;justify-content:center;gap:7px;padding:10px 12px;border-radius:11px;border:1.5px solid var(--wa);color:#128C4A;font-weight:600;font-size:.86rem;text-decoration:none;transition:background .2s,color .2s}
+.reg-go svg{width:16px;height:16px}
+.reg-go:hover{background:var(--wa);color:#0B2E1A}
+.reg.hl .reg-go{background:var(--wa);color:#0B2E1A;border-color:var(--wa)}
+@media(max-width:1099px){.regs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:759px){.regs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;margin:30px -20px 0;padding:4px 20px 10px;scrollbar-width:none}.regs::-webkit-scrollbar{display:none}.reg{flex:0 0 80%;scroll-snap-align:start}}
+
+.tl-h{flex-direction:column;align-items:flex-start;gap:1px}
+.tl-h b{white-space:nowrap;font-size:1.02rem}
+@media(min-width:1100px){.best{min-height:98px}.reg dl div:first-child dd{min-height:2.7em}}
+@media(max-width:600px){.rating .r3{display:none}}
 </style>
 </head>
 <body>
@@ -336,13 +433,13 @@ footer a{color:#9A9AA4;text-decoration:none}
 
 <main>
 <section class="hero" id="top">
- <picture class="bg"><source media="(max-width:759px)" srcset="assets/hero-dubai-m.jpg"><img src="assets/hero-dubai.jpg" alt="" fetchpriority="high" width="2000" height="1333"></picture>
+ <div class="hero-fx" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
  <div class="wrap hero-grid">
   <div>
    <span class="pill"><i class="flag" aria-hidden="true"></i><span id="h-pill">UAE crypto licensing · VARA · ADGM · DIFC · CMA · CBUAE</span></span>
    <h1 id="h-title">Get your <span>crypto licence</span> in the UAE</h1>
    <p class="lead" id="h-lead">Exchanges, brokers, custodians, token issuers and payment firms: our Dubai crypto lawyers pick the right regulator, draft your full application and deal with the regulator until you're licensed. Tell us what you're building and we'll reply with your route, costs and timeline.</p>
-   <div class="rating"><span class="stars" aria-label="5 out of 5">★★★★★</span><b>5.0 on Google</b><span class="dot">·</span><span>10+ licences secured</span><span class="dot">·</span><span>Clients licensed by VARA, ADGM, DIFC and CBUAE</span></div>
+   <div class="rating"><span class="stars" aria-label="5 out of 5">★★★★★</span><b>5.0 on Google</b><span class="dot">·</span><span>10+ licences secured</span><span class="dot r3">·</span><span class="r3">Clients licensed by VARA, ADGM, DIFC and CBUAE</span></div>
    <div class="cta-row">
     <a class="btn btn-wa" href="#" data-wa data-svc="hero" data-loc="hero" id="h-cta"><svg><use href="#wa"/></svg><span id="h-cta-t">Chat with a crypto lawyer</span></a>
    </div>
@@ -358,16 +455,22 @@ footer a{color:#9A9AA4;text-decoration:none}
    </div>
   </div>
   <div class="hero-side">
-  <aside class="glance" aria-label="VARA licence at a glance">
-   <h3>VARA licence at a glance <small>2026</small></h3>
-   <dl>
-    <div><dt>Application fee from</dt><dd>AED 40,000</dd></div>
-    <div><dt>Annual fee from</dt><dd>AED 80,000</dd></div>
-    <div><dt>Paid-up capital from</dt><dd>AED 100,000</dd></div>
-    <div><dt>Typical timeline</dt><dd>6–12 months</dd></div>
-   </dl>
-   <div class="src">Fees per activity, from VARA's published fee schedule. Your exact numbers depend on your activities.</div>
-   <a class="btn btn-gold" style="width:100%;margin-top:14px" href="#" data-wa data-svc="vara_costs" data-loc="glance"><svg><use href="#wa"/></svg>Get my exact costs</a>
+  <aside class="chat" aria-label="Example of a first WhatsApp chat">
+   <div class="chat-top"><span class="av">CV</span><div><b>Cryptoverse Legal</b><small><i class="on"></i>Crypto lawyers · online</small></div><svg class="wa-i"><use href="#wa"/></svg></div>
+   <div class="chat-body">
+    <div class="bub me">Hi, we're launching a crypto exchange in Dubai. What licence do we need and what will it cost?<span class="t">10:02 ✓✓</span></div>
+    <div class="bub them"><p>Usually a VARA licence. Here's where it starts:</p>
+     <dl>
+      <div><dt>Application fee</dt><dd>from AED 40,000</dd></div>
+      <div><dt>Annual fee</dt><dd>from AED 80,000</dd></div>
+      <div><dt>Paid-up capital</dt><dd>from AED 100,000</dd></div>
+      <div><dt>Typical timeline</dt><dd>6–12 months</dd></div>
+     </dl>
+     <p>Tell me your activities and I'll send your exact route and costs.</p><span class="t">10:04</span></div>
+    <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+   </div>
+   <a class="btn btn-gold chat-cta" href="#" data-wa data-svc="vara_costs" data-loc="glance"><svg><use href="#wa"/></svg>Get my exact costs</a>
+   <div class="src">Example chat. Fees per activity, from VARA's published fee schedule; your numbers depend on your activities.</div>
   </aside>
   <figure class="hq"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>&ldquo;They made four regulated activities make sense in one application.&rdquo;</blockquote><figcaption>Anonymous client · VARA approval across four activities</figcaption></figure>
   </div>
@@ -401,8 +504,8 @@ footer a{color:#9A9AA4;text-decoration:none}
 <section id="services">
  <div class="wrap">
   <div class="lbl">What we can help with</div>
-  <h2 class="big">Pick what you need. <span style="color:var(--gold-text)">We'll reply on WhatsApp.</span></h2>
-  <p class="sub">One tap opens WhatsApp with your question already written. No forms, no waiting for a callback.</p>
+  <h2 class="big">What are you looking to launch? <span class="gtxt">We'll map the route.</span></h2>
+  <p class="sub">Tap the one that fits. WhatsApp opens with your question ready, and a crypto lawyer replies with your route, costs and timeline. No forms, no waiting for a callback.</p>
   <div class="svc-grid">
    <article class="svc feat rv"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="tag">Most requested</span><h3>VARA licence, Dubai</h3><p>For exchanges, broker-dealers, custodians, lending, transfer and token issuance in Dubai.</p><ul><li>Activity and capital plan</li><li>Regulatory business plan, AML/CFT manual, policies</li><li>Filing and VARA's questions handled</li></ul><a class="go" href="#" data-wa data-svc="vara" data-loc="svc"><svg><use href="#wa"/></svg>Ask about a VARA licence</a></article>
    <article class="svc rv"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span><span class="tag">Start here</span><h3>Crypto company setup in Dubai</h3><p>The right entity, free zone and shareholding for the licence you need, set up in the right order.</p><ul><li>Free zone or mainland, compared</li><li>Company formation and visas</li><li>Ready for the licence application</li></ul><a class="go" href="#" data-wa data-svc="setup" data-loc="svc"><svg><use href="#wa"/></svg>Ask about company setup</a></article>
@@ -440,17 +543,42 @@ footer a{color:#9A9AA4;text-decoration:none}
   <div class="lbl">The five UAE routes</div>
   <h2 class="big">VARA, ADGM, DIFC, CMA or CBUAE?</h2>
   <p class="sub">The UAE has five crypto regulators. Each covers different places and activities. Here they are side by side, with the lowest published regulator figures.</p>
-  <div class="cmp-wrap rv">
-   <table class="cmp">
-    <thead><tr><th></th><th class="hl">VARA<small>Dubai, outside DIFC</small></th><th>ADGM · FSRA<small>Abu Dhabi Global Market</small></th><th>DIFC · DFSA<small>Dubai Int'l Financial Centre</small></th><th>CMA<small>Federal, onshore UAE</small></th><th>CBUAE<small>Central Bank of the UAE</small></th></tr></thead>
-    <tbody>
-     <tr><th>Best for</th><td class="hl">Exchanges, brokers, custody, lending, token issuance</td><td>Institutional platforms, custody, funds</td><td>Common-law financial centre, token services</td><td>Onshore platforms and brokers</td><td>Payment tokens, AED stablecoins, payment firms</td></tr>
-     <tr><th>Application fee, from</th><td class="hl"><b>AED 40,000</b> per activity</td><td><b>USD 15,000</b> + USD 20,000 crypto add-on</td><td><b>USD 15,000</b> per activity</td><td><b>AED 80,000</b> incl. issuance</td><td>TBD by CBUAE</td></tr>
-     <tr><th>Annual fee, from</th><td class="hl"><b>AED 80,000</b> per activity</td><td><b>USD 15,000</b> + USD 15,000 add-on</td><td><b>USD 20,000</b></td><td><b>AED 55,000</b></td><td>TBD by CBUAE</td></tr>
-     <tr><th>Capital, from</th><td class="hl"><b>AED 100,000</b> (advisory)</td><td><b>USD 50,000</b> (advisory)</td><td><b>USD 30,000</b> (advisory)</td><td><b>AED 500,000</b> (platform)</td><td><b>AED 1.5M</b> (custody, conversion)</td></tr>
-     <tr><th>Typical timeline</th><td class="hl"><b>6–12 months</b></td><td><b>6–8 months</b></td><td><b>6–8 months</b></td><td><b>4–7 months</b></td><td><b>12–18 months</b></td></tr>
-    </tbody>
-   </table>
+  <div class="regs rv">
+   <article class="reg hl">
+    <div class="reg-top"><span class="reg-badge">Most common</span><h3>VARA</h3><small>Dubai, outside DIFC</small></div>
+    <div class="best"><span>Exchanges</span><span>Brokers</span><span>Custody</span><span>Lending</span><span>Token issuance</span></div>
+    <dl><div><dt>Application fee</dt><dd><b>AED 40,000</b> per activity</dd></div><div><dt>Annual fee</dt><dd><b>AED 80,000</b> per activity</dd></div><div><dt>Capital</dt><dd><b>AED 100,000</b> (advisory)</dd></div></dl>
+    <div class="tl"><div class="tl-h"><span>Typical timeline</span><b>6–12 months</b></div><div class="bar" aria-hidden="true"><i style="left:33.3%;width:33.3%"></i></div><div class="scale" aria-hidden="true"><span>0</span><span>6</span><span>12</span><span>18 mo</span></div></div>
+    <a class="reg-go" href="#" data-wa data-svc="vara" data-loc="compare"><svg><use href="#wa"/></svg>Ask about VARA</a>
+   </article>
+   <article class="reg">
+    <div class="reg-top"><h3>ADGM · FSRA</h3><small>Abu Dhabi Global Market</small></div>
+    <div class="best"><span>Institutional platforms</span><span>Custody</span><span>Funds</span></div>
+    <dl><div><dt>Application fee</dt><dd><b>USD 15,000</b> + USD 20,000 crypto add-on</dd></div><div><dt>Annual fee</dt><dd><b>USD 15,000</b> + USD 15,000 add-on</dd></div><div><dt>Capital</dt><dd><b>USD 50,000</b> (advisory)</dd></div></dl>
+    <div class="tl"><div class="tl-h"><span>Typical timeline</span><b>6–8 months</b></div><div class="bar" aria-hidden="true"><i style="left:33.3%;width:11.1%"></i></div><div class="scale" aria-hidden="true"><span>0</span><span>6</span><span>12</span><span>18 mo</span></div></div>
+    <a class="reg-go" href="#" data-wa data-svc="adgm_difc" data-loc="compare"><svg><use href="#wa"/></svg>Ask about ADGM</a>
+   </article>
+   <article class="reg">
+    <div class="reg-top"><h3>DIFC · DFSA</h3><small>Dubai Int'l Financial Centre</small></div>
+    <div class="best"><span>Common-law financial centre</span><span>Token services</span></div>
+    <dl><div><dt>Application fee</dt><dd><b>USD 15,000</b> per activity</dd></div><div><dt>Annual fee</dt><dd><b>USD 20,000</b></dd></div><div><dt>Capital</dt><dd><b>USD 30,000</b> (advisory)</dd></div></dl>
+    <div class="tl"><div class="tl-h"><span>Typical timeline</span><b>6–8 months</b></div><div class="bar" aria-hidden="true"><i style="left:33.3%;width:11.1%"></i></div><div class="scale" aria-hidden="true"><span>0</span><span>6</span><span>12</span><span>18 mo</span></div></div>
+    <a class="reg-go" href="#" data-wa data-svc="adgm_difc" data-loc="compare"><svg><use href="#wa"/></svg>Ask about DIFC</a>
+   </article>
+   <article class="reg">
+    <div class="reg-top"><h3>CMA</h3><small>Federal, onshore UAE</small></div>
+    <div class="best"><span>Onshore platforms</span><span>Brokers</span></div>
+    <dl><div><dt>Application fee</dt><dd><b>AED 80,000</b> incl. issuance</dd></div><div><dt>Annual fee</dt><dd><b>AED 55,000</b></dd></div><div><dt>Capital</dt><dd><b>AED 500,000</b> (platform)</dd></div></dl>
+    <div class="tl"><div class="tl-h"><span>Typical timeline</span><b>4–7 months</b></div><div class="bar" aria-hidden="true"><i style="left:22.2%;width:16.7%"></i></div><div class="scale" aria-hidden="true"><span>0</span><span>6</span><span>12</span><span>18 mo</span></div></div>
+    <a class="reg-go" href="#" data-wa data-svc="compare" data-loc="compare"><svg><use href="#wa"/></svg>Ask about CMA</a>
+   </article>
+   <article class="reg">
+    <div class="reg-top"><h3>CBUAE</h3><small>Central Bank of the UAE</small></div>
+    <div class="best"><span>Payment tokens</span><span>AED stablecoins</span><span>Payment firms</span></div>
+    <dl><div><dt>Application fee</dt><dd>TBD by CBUAE</dd></div><div><dt>Annual fee</dt><dd>TBD by CBUAE</dd></div><div><dt>Capital</dt><dd><b>AED 1.5M</b> (custody, conversion)</dd></div></dl>
+    <div class="tl"><div class="tl-h"><span>Typical timeline</span><b>12–18 months</b></div><div class="bar" aria-hidden="true"><i style="left:66.7%;width:33.3%"></i></div><div class="scale" aria-hidden="true"><span>0</span><span>6</span><span>12</span><span>18 mo</span></div></div>
+    <a class="reg-go" href="#" data-wa data-svc="cbuae" data-loc="compare"><svg><use href="#wa"/></svg>Ask about CBUAE</a>
+   </article>
   </div>
   <div class="cmp-foot">
    <p>These are the lowest published regulator figures, for the simplest activities; exchange, broker-dealer and custody licences cost more. They exclude company setup, office, staff and our professional fees, which we quote separately in writing.</p>
